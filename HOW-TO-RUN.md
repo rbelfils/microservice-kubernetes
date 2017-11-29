@@ -10,6 +10,9 @@ is a Kubernetes environment in a virtual machine that is easy to use
 and install. It is not meant for production but to test Kubernetes or
 for developer environments.
 
+For Windows : Install minikube with hyperV driver : Docker + minikube
+https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/
+
 * Install
   [kubectl](https://kubernetes.io/docs/tasks/kubectl/install/). This
   is the command line interface for Kubernetes.
@@ -112,9 +115,12 @@ latest: digest: sha256:36d87ea5c8628da9a6677c1eafb9009c8f99310f5376872e7b9a1edac
 
 ## Run the containers
 
-* Create a Minikube instance with `minikube start --memory=4000`. This
+* Create a 
+kube instance with `minikube start --memory=4000`. This
   will set the memory of the Kubernetes VM to 4.000 MB - which should
   be enough for most experiments:
+* For windows : the commande is : `minikube.exe start --kubernetes-version="v1.8.0" --vm-driver="hyperv" --memory=4048 --hyperv-virtual-switch="My Virtual Switch" --v=7 --alsologtostderr`
+* My Virtual Switch : was create if you follow link at section : Install minikube with hyperV
 
 ```
 [~/microservice-kubernetes]minikube start --memory=4000
