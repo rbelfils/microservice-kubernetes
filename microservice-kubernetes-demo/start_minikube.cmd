@@ -1,0 +1,1 @@
+minikube.exe start --kubernetes-version="v1.8.0" --vm-driver="hyperv" --memory=4048 --hyperv-virtual-switch="My Virtual Switch" --v=7 --alsologtostderr

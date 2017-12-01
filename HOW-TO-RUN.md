@@ -139,6 +139,8 @@ Kubectl is now configured to use the cluster.
 variable `DOCKER_ACCOUNT` is set to the name of the account on Docker
 Hub you created.
 
+* Before start Pod and services , make all images with PUBLIC acces if you are a free account on Docker Hub.
+
 * Run `kubernetes-deploy.sh` in the directory
 `microservice-kubernetes-demo` :
 
@@ -159,6 +161,7 @@ service "hystrix-dashboard" exposed
 That deploys the images. It creates Pods. Pods might contain one or
 many Docker containers. In this case each Pod contains just one
 Docker container.
+
 
 Also services are created. Services have a clusterwide unique IP
 adress and a DNS entry. Service can use many Pods to do load
